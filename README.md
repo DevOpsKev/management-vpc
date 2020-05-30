@@ -17,3 +17,49 @@ This repo has the following folder structure:
 - [modules](https://github.com/DevOpsKev/management-vpc/tree/master/modules): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
 - [examples](https://github.com/DevOpsKev/management-vpc/tree/master/examples): This folder contains example code demonstrating how to use the submodules.
 - [test](https://github.com/DevOpsKev/management-vpc/tree/master/test): A suite of automated tests for the submodules and examples.
+
+
+## What's a Module?
+
+A Module is a canonical, reusable, best-practices definition for how to run a single piece of infrastructure, such
+as a database or server cluster. Each Module is written using a combination of [Terraform](https://www.terraform.io/)
+and scripts (mostly bash) and include automated tests, documentation, and examples. It is maintained both by the open
+source community and companies that provide commercial support.
+
+Instead of figuring out the details of how to run a piece of infrastructure from scratch, you can reuse
+existing code that has been proven in production. And instead of maintaining all that infrastructure code yourself,
+you can leverage the work of the Module community to pick up infrastructure improvements through
+a version number bump.
+
+## Who maintains this Module?
+
+This Module is maintained by [DevOn](http://www.devon.nl). If you're looking for commercial
+support, send an email to [iac@devon.nl](mailto:modules@gruntwork.io?Subject=InfluxDB%20for%20AWS%20Module).
+DevOn can help with:
+
+- Setup, customization, and support for this Module.
+- Modules for other types of infrastructure, such as VPCs, Docker clusters, databases, and continuous integration.
+- Modules that meet compliance requirements, such as HIPAA.
+- Consulting & Training on AWS, Terraform, and DevOps.
+
+## How do I contribute to this Module?
+
+Contributions are welcome. Check out the
+[Contribution Guidelines](https://github.com/DevOpsKev/management-vpc/tree/master/CONTRIBUTING.md) for instructions.
+
+## How is this Module versioned?
+
+This Module follows the principles of [Semantic Versioning](http://semver.org/). You can find each new release,
+along with the changelog, in the [Releases Page](../../releases).
+
+During initial development, the major version will be 0 (e.g., `0.x.y`), which indicates the code does not yet have a
+stable API. Once we hit `1.0.0`, we will make every effort to maintain a backwards compatible API and use the MAJOR,
+MINOR, and PATCH versions on each release to indicate any incompatibilities.
+
+## License
+
+This code is released under the Apache 2.0 License. Please see
+[LICENSE](https://github.com/DevOpsKev/management-vpc/tree/master/LICENSE) and
+[NOTICE](https://github.com/DevOpsKev/management-vpc/tree/master/NOTICE) for more details.
+
+Copyright &copy; 2020 DevOn.nl
