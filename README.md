@@ -34,7 +34,7 @@ a version number bump.
 ## Who maintains this Module?
 
 This Module is maintained by [DevOn](http://www.devon.nl). If you're looking for commercial
-support, send an email to [iac@devon.nl](mailto:modules@gruntwork.io?Subject=InfluxDB%20for%20AWS%20Module).
+support, send an email to [iac@devon.nl](mailto:[iac@devon.nl?Subject=AWS%20Management%20VPC).
 DevOn can help with:
 
 - Setup, customization, and support for this Module.
