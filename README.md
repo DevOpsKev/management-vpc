@@ -8,7 +8,7 @@ This repository contains the exemplar module for deploying a Management VPC on [
 ## Quick start
 If you want to get started and deploy the Management VPC, you can run the main.tf that is in the root of this repo.
 
-## What's included with this repo
+## What's included with this repo?
 
 This repo has the following folder structure:
 
