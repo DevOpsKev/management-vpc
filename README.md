@@ -2,4 +2,4 @@
 
 
 # Management VPC AWS Module
-Management VPC Example
+This repo contains the exemplar module for deploying a Management VPC on [AWS](https://aws.amazon.com/) using [Terraform](https://www.terraform.io/).
