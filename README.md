@@ -14,6 +14,6 @@ This repo has the following folder structure:
 
 - [root](https://github.com/DevOpsKev/management-vpc/tree/master): The root folder contains an example
   of how to deploy the Management VPC.
-- [modules]((https://github.com/DevOpsKev/management-vpc/tree/master/modules)): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
-- [examples]((https://github.com/DevOpsKev/management-vpc/tree/master/examples)): This folder contains example code demonstrating how to use the submodules.
-- [test]((https://github.com/DevOpsKev/management-vpc/tree/master/test)): A suite of automated tests for the submodules and examples.
+- [modules](https://github.com/DevOpsKev/management-vpc/tree/master/modules): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
+- [examples](https://github.com/DevOpsKev/management-vpc/tree/master/examples): This folder contains example code demonstrating how to use the submodules.
+- [test](https://github.com/DevOpsKev/management-vpc/tree/master/test): A suite of automated tests for the submodules and examples.
