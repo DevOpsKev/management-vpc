@@ -19,3 +19,19 @@ Either by setting AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY or by means of aws
 
 #### #2 Deploy S3 Bucket and DynamoDB Table
 Run ```terraform init``` to download the provider code and then run ```terraform apply``` to deploy. You will now have deployed both those instances but with state stored locally.
+
+
+#### #3 Move backend state management to S3 Bucket and DynamoDB Table
+Add the following configuration to main.tf in this directory.
+
+```
+terraform {
+  backend "s3" {
+    bucket         = var.bucket_name
+    key            = "global/s3/terraform.tfstate"
+    region         = var.aws_region"
+    dynamodb_table = var.table_name
+    encrypt        = true
+  }
+}
+```
