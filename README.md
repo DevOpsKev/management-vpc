@@ -22,6 +22,9 @@ To deploy this repo and make use of the supporting code samples you will need th
 
 The following tools are not strictly required to work with this repo but we recommend their use and used them oursleves in the creation of this repo:
 - [AWS Cloud9 IDE](https://aws.amazon.com/cloud9/): A cloud-native IDE for writing, running, and debugging code. 
+- [CircleCI](https://circleci.com/): CI that’s built for the cloud. Automate your development process quickly, safely,
+and at scale.
+- [SonarCloud](https://sonarcloud.io/): Maximize your throughput and only release clean code. SonarCloud automatically analyzes branches and decorates pull requests.
 - [CloudCraft](https://cloudcraft.co/): Create a professional architecture diagram in minutes with the Cloudcraft visual designer, optimized for AWS with smart components.
 
 ## What's included with this repo?
