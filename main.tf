@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "devon"
+    organization = "devonnl-elsevier"
 
     workspaces {
       name = "learn-terraform-circleci"
