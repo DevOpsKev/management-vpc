@@ -25,6 +25,9 @@ Run ```terraform init``` to download the provider code and then run ```terraform
 Add the following configuration to main.tf in this directory.
 
 ```
+# ----------------------------------------------------------------------------------------------------------------------
+# CONFIGURE S3 BACKEND
+# ----------------------------------------------------------------------------------------------------------------------
 terraform {
   backend "s3" {
     bucket         = var.bucket_name
