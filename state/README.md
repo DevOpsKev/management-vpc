@@ -10,7 +10,7 @@ With remote state, Terraform writes the state data to a remote data store, which
 
 ## Example [S3](https://aws.amazon.com/s3/) Bucket (state storage) and [DynamoDB](https://aws.amazon.com/dynamodb/) (locking)
 
-To enable remote state storage with S3, we will first create an S3 bucket and then create a DynamoDB table for locking. The DynamoDB table must havd a primary key called 'LockID' and please note this is CASE SENSITIVE.
+To enable remote state storage with S3, we will first create an S3 bucket and then create a DynamoDB table for locking. The DynamoDB table must havd a primary key called 'LockID' and please note this is CASE SENSITIVE. You will use these assets to manage state for the examples in this repo.
 
 ### Step by Step
 
@@ -21,7 +21,7 @@ Either by setting AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY or by means of aws
 Run ```terraform init``` to download the provider code and then run ```terraform apply``` to deploy. You will now have deployed both those instances but with state stored locally.
 
 
-#### #3 Move backend state management to S3 Bucket and DynamoDB Table (optional)
+#### #3 Move backend state management to S3 Bucket and DynamoDB Table (optional, example only not production grade)
 Add the following configuration to main.tf in this directory. Note variable names cannot be used in this code block.
 
 ```
