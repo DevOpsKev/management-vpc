@@ -21,6 +21,7 @@ To deploy this repo and make use of the supporting code samples you will need th
 ## Tooling
 
 The following tools are not strictly required to work with this repo but we recommend their use and used them oursleves in the creation of this repo:
+- [Github](https://github.com): GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside 50 million developers.
 - [AWS Cloud9 IDE](https://aws.amazon.com/cloud9/): A cloud-native IDE for writing, running, and debugging code. 
 - [CircleCI](https://circleci.com/): CI that’s built for the cloud. Automate your development process quickly, safely,
 and at scale.
