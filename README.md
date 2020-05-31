@@ -12,8 +12,8 @@ If you want to get started and deploy the Management VPC, you can run the main.t
 
 This repo has the following folder structure:
 
-- [root](https://github.com/DevOpsKev/management-vpc/tree/master): The root folder contains an example
-  of how to deploy the Management VPC.
+- [root](https://github.com/DevOpsKev/management-vpc/tree/master): The root folder contains an example of how to deploy the Management VPC.
+- [state](https://github.com/DevOpsKev/management-vpc/tree/master/state): This folder contains bootstrap terraform scripts to deploy s3 and dynamodb instances for Terraform shared state management and transaction locking.
 - [modules](https://github.com/DevOpsKev/management-vpc/tree/master/modules): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
 - [examples](https://github.com/DevOpsKev/management-vpc/tree/master/examples): This folder contains example code demonstrating how to use the submodules.
 - [test](https://github.com/DevOpsKev/management-vpc/tree/master/test): A suite of automated tests for the submodules and examples.
