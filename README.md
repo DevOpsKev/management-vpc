@@ -6,7 +6,7 @@
 This repository contains the exemplar module for deploying a Management VPC on [AWS](https://aws.amazon.com/) using [Terraform](https://www.terraform.io/).
 
 
-![management vpc architecture](https://github.com/gruntwork-io/terraform-aws-influx/blob/master/_docs/tick-multi-cluster-architecture.png?raw=true)
+![management vpc architecture](https://github.com/DevOpsKev/management-vpc/blob/master/_docs/architecture.png?raw=true)
 
 ## Quick start
 If you want to get started and deploy the Management VPC, navigate to the deploy directory and execute ```init.sh``` then ```apply.sh```.
