@@ -4,7 +4,7 @@ terraform {
     organization = "devonnl-elsevier"
 
     workspaces {
-      name = "learn-terraform-circleci"
+      name = "management-vpc"
     }
   }
 }
