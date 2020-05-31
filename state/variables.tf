@@ -21,11 +21,11 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "The name of the s3 bucket in which terraform state will be stored"
   type        = string
-  default     = "terraform-spikes-shared-state"
+  default     = "terraform-shared-state"
 }
 
 variable "table_name" {
   description = "The name of the dynamoDB table in which terraform state locks will be stored"
   type        = string
-  default     = "terraform-spikes-shared-state-locks"
+  default     = "terraform-shared-state-locks"
 }
