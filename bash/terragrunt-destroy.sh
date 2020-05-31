@@ -11,3 +11,4 @@ else
   cat ../bash/fail.sh
   exit 1
 fi
+
