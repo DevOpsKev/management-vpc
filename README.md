@@ -11,6 +11,13 @@ This repository contains the exemplar module for deploying a Management VPC on [
 ## Quick start
 If you want to get started and deploy the Management VPC, navigate to the deploy directory and execute ```init.sh``` then ```apply.sh```.
 
+## Dependencies
+
+To deploy this repo and make use of the supporting code examples you will need the following dependencies installed on your developer workstation:
+- [Terraform](https://www.terraform.io/): Use Infrastructure as Code to provision and manage any cloud, infrastructure, or service
+- [Terragrunt](https://terragrunt.gruntwork.io/): Terragrunt is a thin wrapper that provides extra tools for keeping your configurations DRY, working with multiple Terraform modules, and managing remote state.
+- [Terratest](https://terratest.gruntwork.io/): Terratest is a Go library that makes it easier to write automated tests for your infrastructure code. 
+
 ## What's included with this repo?
 
 This repo has the following folder structure:
