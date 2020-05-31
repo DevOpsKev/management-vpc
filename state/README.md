@@ -11,3 +11,7 @@ With remote state, Terraform writes the state data to a remote data store, which
 ## Example [S3](https://aws.amazon.com/s3/) Bucket (state storage) and [DynamoDB](https://aws.amazon.com/dynamodb/) (locking)
 
 To enable remote state storage with S3, we will first create an S3 bucket and then create a DynamoDB table for locking. The DynamoDB table must havd a primary key called 'LockID' and please note this is CASE SENSITIVE.
+
+### Step by Step
+
+#1 Configure credentials for your AWS CLI, either by setting AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY or by means of aws-adfs. Beneath the covers Terraform provides and abstraction over the AWS SDK for Go so your undelying AWS CLI must be configured for your account.
