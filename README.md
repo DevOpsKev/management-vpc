@@ -1,5 +1,6 @@
 [![Built for Reasearch Data Management](https://img.shields.io/badge/elsevier%20project-rdm-orange?style=flat-square)](https://www.elsevier.com/solutions/mendeley-data-platform)
 [![Maintained by DevOn.nl](https://img.shields.io/badge/maintained%20by-devon.nl-blue?style=flat-square)](https://devon.nl) 
+[![Terraform Version](https://img.shields.io/badge/terraform-=> 0.12.0-green?style=flat-square)](https://github.com/hashicorp/terraform) 
 
 
 # Management VPC AWS Module
