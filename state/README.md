@@ -38,3 +38,5 @@ terraform {
   }
 }
 ```
+
+Run ```terraform init`` again. This will configure terraform to use the S3 backend for state management. Terraform will detect that you have a local state file locally and prompt you to copy it to the new S3 backend. Type in “yes" and state management will now be handled by S3 and your new DynamoDB table.
