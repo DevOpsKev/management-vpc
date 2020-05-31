@@ -7,3 +7,5 @@ This state is stored by default in a local file named "terraform.tfstate", but i
 When working with Terraform in a team, use of a local file makes Terraform usage complicated because each user must make sure they always have the latest state data before running Terraform and make sure that nobody else runs Terraform at the same time. Remote state is a feature of Terraform [backends](https://www.terraform.io/docs/backends/index.html) and is intended to mitigate this issue.
 
 With remote state, Terraform writes the state data to a remote data store, which can then be shared between all members of a team. But remote state gives you more than just easier version control and safer storage. It also allows you to delegate the outputs to other teams. This allows your infrastructure to be more easily broken down into components that multiple teams can access.
+
+## Exanple [S3](https://aws.amazon.com/s3/) Bucket (state storage) and [DynamoDB](https://aws.amazon.com/dynamodb/) (locking)
