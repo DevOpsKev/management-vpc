@@ -18,4 +18,4 @@ To enable remote state storage with S3, we will first create an S3 bucket and th
 Either by setting AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY or by means of aws-adfs. Beneath the covers Terraform provides and abstraction over the AWS SDK for Go so your undelying AWS CLI must be configured for your account.
 
 #### #2 Deploy S3 Bucket and DynamoDB Table
-Run ```terraform init``` to download the provider code and then run ```terraform apply``` to deploy. you will now have deployed both those instances but with state stored locally.
+Run ```terraform init``` to download the provider code and then run ```terraform apply``` to deploy. You will now have deployed both those instances but with state stored locally.
