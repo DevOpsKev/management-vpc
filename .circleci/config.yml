@@ -97,13 +97,7 @@ jobs:
 
     steps:
       - run:
-          name: "Push to S3"
-          command: |
-            pip install --user awscli
-            export PATH="~/.local/bin:$PATH"
-            git clone https://github.com/DevOpsKev/management-vpc .
-            pwd
-            aws s3 sync --acl public-read "/home/circleci/project/assets" s3://${APP_BUCKET}
+          name: "Blank Step"
   destroy:
     <<: *default_config
     steps:
