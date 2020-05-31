@@ -8,4 +8,4 @@ When working with Terraform in a team, use of a local file makes Terraform usage
 
 With remote state, Terraform writes the state data to a remote data store, which can then be shared between all members of a team. But remote state gives you more than just easier version control and safer storage. It also allows you to delegate the outputs to other teams. This allows your infrastructure to be more easily broken down into components that multiple teams can access.
 
-## Exanple [S3](https://aws.amazon.com/s3/) Bucket (state storage) and [DynamoDB](https://aws.amazon.com/dynamodb/) (locking)
+## Example [S3](https://aws.amazon.com/s3/) Bucket (state storage) and [DynamoDB](https://aws.amazon.com/dynamodb/) (locking)
