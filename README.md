@@ -13,6 +13,16 @@ This repository contains the exemplar module for deploying a Management VPC on [
 ## Quick start
 If you want to get started and deploy the Management VPC, navigate to the deploy directory and execute ```init.sh``` then ```apply.sh```.
 
+## How to use this repo
+
+Follow these steps to implement the AWS Management VPC:
+
+- ### State Management
+
+  1. Use the scripts in the
+     [state](https://github.com/DevOpsKev/management-vpc/tree/master/state) directory to configure remote state management and locking.
+
+
 ## Dependencies
 
 To deploy this repo and make use of the supporting code samples you will need the following dependencies installed on your developer workstation and CICD host:
