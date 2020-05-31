@@ -6,7 +6,7 @@
 This repository contains the exemplar module for deploying a Management VPC on [AWS](https://aws.amazon.com/) using [Terraform](https://www.terraform.io/).
 
 ## Quick start
-If you want to get started and deploy the Management VPC, you can run the main.tf that is in the root of this repo.
+If you want to get started and deploy the Management VPC, navigate to the deploy directory and execute ```apply.sh```.
 
 ## What's included with this repo?
 
