@@ -1,0 +1,1 @@
+https://github.com/cn-terraform/terraform-aws-ecs-fargate/releases/tag/2.0.16

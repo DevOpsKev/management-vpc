@@ -1,0 +1,1 @@
+https://github.com/cn-terraform/terraform-aws-networking/releases/tag/2.0.7
