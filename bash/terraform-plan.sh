@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-
-terragrunt destroy -auto-approve
+terraform plan
 
 if [ $? -eq 0 ]
 then

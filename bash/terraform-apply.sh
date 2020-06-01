@@ -12,7 +12,7 @@ hashVar="git_hash=${hash}"
 
 deployStatusVar="deploy_status=${status}"
 
-terragrunt apply -var "$branchVar" -var "$hashVar" -var "$deployStatusVar" -auto-approve
+terraform apply -var "$branchVar" -var "$hashVar" -var "$deployStatusVar" -auto-approve
 
 if [ $? -eq 0 ]
 then

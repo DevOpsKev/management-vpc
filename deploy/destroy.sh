@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-. ../shell/terragrunt-destroy.sh
+. ../shell/terraform-destroy.sh

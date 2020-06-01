@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-. ../shell/terragrunt-init.sh
+. ../shell/terraform-init.sh

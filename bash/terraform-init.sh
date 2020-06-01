@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-terragrunt init
+terraform init
 
 if [ $? -eq 0 ]
 then
