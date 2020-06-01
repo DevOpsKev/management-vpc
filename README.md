@@ -47,7 +47,7 @@ This repo has the following folder structure:
 - [modules](https://github.com/DevOpsKev/management-vpc/tree/master/modules): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
 - [deploy](https://github.com/DevOpsKev/management-vpc/tree/master/deploy): This folder contains example code demonstrating how to deploy the Management VPC.
 - [test](https://github.com/DevOpsKev/management-vpc/tree/master/test): A suite of automated tests for the submodules and examples.
-- [bash](https://github.com/DevOpsKev/management-vpc/tree/master/bash): Bash helper scripts to wrap terragrunt commands and tag deployed instances with Git branch and commit hash.
+- [bash](https://github.com/DevOpsKev/management-vpc/tree/master/bash): Bash helper scripts to wrap terraform commands and tag deployed instances with Git branch and commit hash.
 
 
 ## What's a Module?
