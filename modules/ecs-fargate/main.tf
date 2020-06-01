@@ -2,10 +2,7 @@
 # ECS Cluster
 #------------------------------------------------------------------------------
 module ecs-cluster {
-  source  = "cn-terraform/ecs-cluster/aws"
-  version = "1.0.5"
-  # source  = "../terraform-aws-ecs-cluster"
-
+  source  = "../ecs-cluster"
   name    = "${var.name_preffix}"
 }
 
@@ -13,9 +10,7 @@ module ecs-cluster {
 # ECS Task Definition
 #------------------------------------------------------------------------------
 module "td" {
-  source  = "cn-terraform/ecs-fargate-task-definition/aws"
-  version = "1.0.11"
-  # source  = "../terraform-aws-ecs-fargate-task-definition"
+  source  = "../ecs-fargate-task-definition"
 
   name_preffix                 = var.name_preffix
   container_image              = var.container_image
@@ -56,9 +51,7 @@ module "td" {
 # AWS LOAD BALANCER
 #------------------------------------------------------------------------------
 module "ecs-alb" {
-  source  = "cn-terraform/ecs-alb/aws"
-  version = "1.0.1"
-  # source  = "../terraform-aws-ecs-alb"
+  source  = "../ecs-alb"
 
   name_preffix = "${var.name_preffix}"
   vpc_id       = var.vpc_id
