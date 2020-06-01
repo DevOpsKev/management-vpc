@@ -1,7 +1,7 @@
 [![Built for Reasearch Data Management](https://img.shields.io/badge/elsevier%20project-rdm-orange?style=flat-square)](https://www.elsevier.com/solutions/mendeley-data-platform)
 [![Maintained by DevOn.nl](https://img.shields.io/badge/maintained%20by-devon.nl-blue?style=flat-square)](https://devon.nl) 
 [![Terraform Version](https://img.shields.io/badge/terraform-=>%200.12.0-green?style=flat-square)](https://github.com/hashicorp/terraform) 
-[![Latest](https://img.shields.io/badge/latest-0.0.0-green?style=flat-square)](../../releases) 
+[![Latest](https://img.shields.io/badge/latest-0.0.1-green?style=flat-square)](../../releases) 
 
 
 # Management VPC AWS Module
@@ -11,15 +11,18 @@ This repository contains the exemplar module for deploying a Management VPC on [
 ![management vpc architecture](https://github.com/DevOpsKev/management-vpc/blob/master/_docs/architecture.png?raw=true)
 
 ## Quick start
-If you want to get started and deploy the Management VPC, navigate to the deploy directory and execute ```init.sh``` then ```apply.sh```.
+If you want to get started and deploy the Management VPC, configure remote state management with ```terraform login``` then execute ```init.sh``` and ```apply.sh```.
 
 ## How to use this repo
 
 Follow these steps to implement the AWS Management VPC:
 
-#### Step #1 Configure circleci.io
+#### Step #0 Github
+If you are viewing this readme by any other means go to the canonical repository on [Github](https://github.com/DevOpsKev/management-vpc) for the most up to date version of this module.
+
+#### Step #1 Configure terraform.io
 - todo
-#### Step #2 Configure terraform.io
+#### Step #2 Configure circleci.io
 - todo
 #### Step #3 Deploy through CICD
 - todo
@@ -51,7 +54,6 @@ This repo has the following folder structure:
 - [root](https://github.com/DevOpsKev/management-vpc/tree/master): The root folder contains an example of how to deploy the Management VPC.
 - [state](https://github.com/DevOpsKev/management-vpc/tree/master/state): This folder contains bootstrap terraform scripts to deploy s3 and dynamodb instances for Terraform shared state management and transaction locking.
 - [modules](https://github.com/DevOpsKev/management-vpc/tree/master/modules): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
-- [deploy](https://github.com/DevOpsKev/management-vpc/tree/master/deploy): This folder contains example code demonstrating how to deploy the Management VPC.
 - [test](https://github.com/DevOpsKev/management-vpc/tree/master/test): A suite of automated tests for the submodules and examples.
 - [bash](https://github.com/DevOpsKev/management-vpc/tree/master/bash): Bash helper scripts to wrap terraform commands and tag deployed instances with Git branch and commit hash.
 
@@ -82,7 +84,8 @@ DevOn can help with:
 ## How do I contribute to this Module?
 
 Contributions are welcome. Check out the
-[Contribution Guidelines](https://github.com/DevOpsKev/management-vpc/tree/master/CONTRIBUTING.md) for instructions.
+[Contribution Guidelines](https://github.com/DevOpsKev/management-vpc/tree/master/CONTRIBUTING.md) and 
+[Code of Conduct](https://github.com/DevOpsKev/management-vpc/tree/master/CONDUCT.md) for instructions.
 
 ## How is this Module versioned?
 
