@@ -20,9 +20,9 @@ Follow these steps to implement the AWS Management VPC:
 #### Step #0 Github
 If you are viewing this readme by any other means go to the canonical repository on [Github](https://github.com/DevOpsKev/management-vpc) for the most up to date version of this module.
 
-#### Step #1 Configure circleci.io
+#### Step #1 Configure terraform.io
 - todo
-#### Step #2 Configure terraform.io
+#### Step #2 Configure circleci.io
 - todo
 #### Step #3 Deploy through CICD
 - todo
