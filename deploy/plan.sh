@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-. ../shell/terraform-plan.sh
+. ../bash/terraform-plan.sh
