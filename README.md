@@ -18,7 +18,10 @@ If you want to get started and deploy the Management VPC, navigate to the deploy
 Follow these steps to implement the AWS Management VPC:
 
 #### Step #1
-- Use the scripts in the [state](https://github.com/DevOpsKev/management-vpc/tree/master/state) directory to configure Terraform remote state management and locking.
+- configure circleci.io
+- configure terraform.io
+- run first deploy
+- configure croudcraft.co
 
 
 ## Dependencies
