@@ -11,7 +11,7 @@ This repository contains the exemplar module for deploying a Management VPC on [
 ![management vpc architecture](https://github.com/DevOpsKev/management-vpc/blob/master/_docs/architecture.png?raw=true)
 
 ## Quick start
-If you want to get started and deploy the Management VPC, navigate to the deploy directory and execute ```init.sh``` then ```apply.sh```.
+If you want to get started and deploy the Management VPC, configure remote state management with ```terraform login``` then execute ```init.sh``` and ```apply.sh```.
 
 ## How to use this repo
 
@@ -51,7 +51,6 @@ This repo has the following folder structure:
 - [root](https://github.com/DevOpsKev/management-vpc/tree/master): The root folder contains an example of how to deploy the Management VPC.
 - [state](https://github.com/DevOpsKev/management-vpc/tree/master/state): This folder contains bootstrap terraform scripts to deploy s3 and dynamodb instances for Terraform shared state management and transaction locking.
 - [modules](https://github.com/DevOpsKev/management-vpc/tree/master/modules): This folder contains the supporting code for this Module, broken down into multiple standalone submodules.
-- [deploy](https://github.com/DevOpsKev/management-vpc/tree/master/deploy): This folder contains example code demonstrating how to deploy the Management VPC.
 - [test](https://github.com/DevOpsKev/management-vpc/tree/master/test): A suite of automated tests for the submodules and examples.
 - [bash](https://github.com/DevOpsKev/management-vpc/tree/master/bash): Bash helper scripts to wrap terraform commands and tag deployed instances with Git branch and commit hash.
 
