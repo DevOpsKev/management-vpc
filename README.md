@@ -17,6 +17,9 @@ If you want to get started and deploy the Management VPC, configure remote state
 
 Follow these steps to implement the AWS Management VPC:
 
+#### Step #0 Github
+If you are viewing this readme by any other means go to the canonical repository on [Github](https://github.com/DevOpsKev/management-vpc) for the most up to date version of this module.
+
 #### Step #1 Configure circleci.io
 - todo
 #### Step #2 Configure terraform.io
