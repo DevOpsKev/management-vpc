@@ -84,7 +84,8 @@ DevOn can help with:
 ## How do I contribute to this Module?
 
 Contributions are welcome. Check out the
-[Contribution Guidelines](https://github.com/DevOpsKev/management-vpc/tree/master/CONTRIBUTING.md) for instructions.
+[Contribution Guidelines](https://github.com/DevOpsKev/management-vpc/tree/master/CONTRIBUTING.md) and 
+[Code of Conduct](https://github.com/DevOpsKev/management-vpc/tree/master/CONDUCT.md) for instructions.
 
 ## How is this Module versioned?
 
