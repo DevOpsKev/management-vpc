@@ -167,3 +167,16 @@ resource "aws_lb_listener" "lb_http_listeners" {
     type             = "forward"
   }
 }
+
+resource "aws_lb_listener" "lb_https_listeners" {
+  count             = var.enable_https ? length(aws_lb_target_group.lb_https_tgs) : 0
+  load_balancer_arn = aws_lb.lb.arn
+  port              = element(aws_lb_target_group.lb_https_tgs.*.port, count.index)
+  protocol          = element(aws_lb_target_group.lb_https_tgs.*.protocol, count.index)
+  ssl_policy        = var.ssl_policy
+  certificate_arn   = var.certificate_arn
+  default_action {
+    target_group_arn = element(aws_lb_target_group.lb_https_tgs.*.arn, count.index)
+    type             = "forward"
+  }
+}

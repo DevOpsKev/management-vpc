@@ -17,5 +17,6 @@ module "load_balancer" {
   vpc_id          = module.base-network.vpc_id
   private_subnets = module.base-network.private_subnets_ids
   public_subnets  = module.base-network.public_subnets_ids
+  ssl_policy      = "ELBSecurityPolicy-2016-08"
+  certificate_arn = "arn:aws:acm:us-east-1:660456532861:certificate/3b8ed596-a4e3-4689-9281-c4a8704a065f"
 }
-
