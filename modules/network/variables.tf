@@ -29,3 +29,15 @@ variable "private_subnets_cidrs_per_availability_zone" {
   type        = list
   description = "List of CIDRs to use on each availability zone for private subnets"
 }
+
+variable "git_branch" {
+    default = "unknown"
+}
+variable "git_hash" {
+    default = "unknown"
+}
+variable "deploy_status" {
+    default = "unknown"
+}
+
+

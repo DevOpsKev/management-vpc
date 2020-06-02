@@ -55,3 +55,13 @@ output "private_subnets_route_table_id" {
   description = "ID of the Route Table used on Private networks"
   value       = aws_route_table.private_subnets_route_table.*.id
 }
+
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# AWS Subnets - Public
+# ---------------------------------------------------------------------------------------------------------------------
+output "public_subnets" {
+  value = [aws_subnet.public_subnets[0].id]
+}
+

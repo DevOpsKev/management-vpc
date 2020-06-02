@@ -3,3 +3,6 @@
 terraform.tfstate
 terraform.tfvars
 *.tfstate*
+
+# SSH files
+ssh/*

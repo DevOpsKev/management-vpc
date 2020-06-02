@@ -7,6 +7,9 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true               # A boolean flag to enable/disable DNS hostnames in the VPC.
   tags = {
     Name = "${var.name_preffix}-vpc"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
@@ -16,7 +19,10 @@ resource "aws_vpc" "vpc" {
 resource "aws_internet_gateway" "internet_gw" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "${var.name_preffix}-internet-gw"
+    Name = "${var.name_preffix}-igw"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
@@ -32,6 +38,9 @@ resource "aws_subnet" "public_subnets" {
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.name_preffix}-public-net-${element(var.availability_zones, count.index)}"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
@@ -41,7 +50,11 @@ resource "aws_eip" "nat_eip" {
   vpc   = true
   tags = {
     Name = "${var.name_preffix}-nat-eip-${element(var.availability_zones, count.index)}"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
+  
 }
 
 # NAT Gateways
@@ -52,6 +65,9 @@ resource "aws_nat_gateway" "nat_gw" {
   subnet_id     = element(aws_subnet.public_subnets.*.id, count.index)
   tags = {
     Name = "${var.name_preffix}-nat-gw-${element(var.availability_zones, count.index)}"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
@@ -61,6 +77,9 @@ resource "aws_route_table" "public_subnets_route_table" {
   vpc_id = aws_vpc.vpc.id
   tags = {
     Name = "${var.name_preffix}-public-rt-${element(var.availability_zones, count.index)}"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
@@ -95,6 +114,9 @@ resource "aws_subnet" "private_subnets" {
   map_public_ip_on_launch = false
   tags = {
     Name = "${var.name_preffix}-private-net-${element(var.availability_zones, count.index)}"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
@@ -104,6 +126,9 @@ resource "aws_route_table" "private_subnets_route_table" {
   vpc_id = aws_vpc.vpc.id
   tags = {
     Name = "${var.name_preffix}-private-rt-${element(var.availability_zones, count.index)}"
+    GIT-BRANCH = var.git_branch
+    GIT-HASH = var.git_hash
+    DEPLOY-STATUS = var.deploy_status
   }
 }
 
