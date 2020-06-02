@@ -8,7 +8,7 @@
 This repository contains the exemplar module for deploying a Management VPC on [AWS](https://aws.amazon.com/) using [Terraform](https://www.terraform.io/).
 
 
-![management vpc architecture](https://github.com/DevOpsKev/management-vpc/blob/master/_docs/architecture.png?raw=true)
+![management vpc architecture](https://github.com/DevOpsKev/management-vpc/blob/master/_docs/management-vpc-demo.png?raw=true)
 
 ## Quick start
 If you want to get started and deploy the Management VPC, configure remote state management with ```terraform login``` then execute ```init.sh``` and ```apply.sh```.
