@@ -1,3 +1,6 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# CONFIGURE TERRAFORM
+# ----------------------------------------------------------------------------------------------------------------------
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
@@ -9,58 +12,22 @@ terraform {
   }
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# CONFIGURE AWS PROVIDER
+# ----------------------------------------------------------------------------------------------------------------------
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 }
 
-provider "template" {
+# ----------------------------------------------------------------------------------------------------------------------
+# CONFIGURE NETWORK
+# ----------------------------------------------------------------------------------------------------------------------
+
+module "network" {
+  source                                      = "./modules/network"
+  name_preffix                                = "base"
+  vpc_cidr_block                              = "192.168.0.0/16"
+  availability_zones                          = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d"]
+  public_subnets_cidrs_per_availability_zone  = ["192.168.0.0/19", "192.168.32.0/19", "192.168.64.0/19", "192.168.96.0/19"]
+  private_subnets_cidrs_per_availability_zone = ["192.168.128.0/19", "192.168.160.0/19", "192.168.192.0/19", "192.168.224.0/19"]
 }
-
-resource "aws_iam_user" "circleci" {
-  name = var.user
-  path = "/system/"
-}
-
-resource "aws_iam_access_key" "circleci" {
-  user = aws_iam_user.circleci.name
-}
-
-data "template_file" "circleci_policy" {
-  template = file("circleci_s3_access.tpl.json")
-  vars = {
-    s3_bucket_arn = aws_s3_bucket.portfolio.arn
-  }
-}
-
-resource "local_file" "circle_credentials" {
-  filename = "tmp/circleci_credentials"
-  content  = "${aws_iam_access_key.circleci.id}\n${aws_iam_access_key.circleci.secret}"
-}
-
-resource "aws_iam_user_policy" "circleci" {
-  name   = "AllowCircleCI"
-  user   = aws_iam_user.circleci.name
-  policy = data.template_file.circleci_policy.rendered
-}
-
-resource "aws_s3_bucket" "portfolio" {
-  tags = {
-    Name = "Portfolio Website Bucket"
-  }
-
-  bucket = "${var.app}.${var.label}"
-  acl    = "public-read"
-
-  website {
-    index_document = "${var.app}.html"
-    error_document = "error.html"
-  }
-  force_destroy = true
-
-}
-
-output "Endpoint" {
-  value = aws_s3_bucket.portfolio.website_endpoint
-}
-
-

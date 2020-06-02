@@ -1,1 +1,0 @@
-https://github.com/cn-terraform/terraform-aws-cloudwatch-logs/releases/tag/1.0.6

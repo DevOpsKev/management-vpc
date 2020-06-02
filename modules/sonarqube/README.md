@@ -1,1 +1,0 @@
-https://github.com/cn-terraform/terraform-aws-sonarqube/releases/tag/2.0.11

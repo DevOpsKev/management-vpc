@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-terraform init
+terraform init -backend-config="token=${TF_API_TOKEN}"
 
 if [ $? -eq 0 ]
 then
