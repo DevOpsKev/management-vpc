@@ -22,6 +22,8 @@ module "load_balancer" {
   vpc_id          = module.base-network.vpc_id
   private_subnets = module.base-network.private_subnets_ids
   public_subnets  = module.base-network.public_subnets_ids
+  ssl_policy      = "ELBSecurityPolicy-2016-08"
+  certificate_arn = "arn:aws:acm:us-east-1:660456532861:certificate/3b8ed596-a4e3-4689-9281-c4a8704a065f"
 }
 
 module "td" {
@@ -29,6 +31,7 @@ module "td" {
   name_preffix    = "test-td"
   container_image = "ubuntu"
   container_name  = "test"
+    
 }
 
 module "service" {
@@ -45,5 +48,8 @@ module "service" {
   lb_http_tgs_arns        = module.load_balancer.lb_http_tgs_arns
   lb_https_tgs_arns       = module.load_balancer.lb_https_tgs_arns
   lb_http_listeners_arns  = module.load_balancer.lb_http_listeners_arns
+  lb_https_listeners_arns = module.load_balancer.lb_https_listeners_arns
   load_balancer_sg_id     = module.load_balancer.aws_security_group_lb_access_sg_id
+  
 }
+

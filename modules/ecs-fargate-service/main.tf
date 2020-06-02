@@ -1,3 +1,4 @@
+  
 #------------------------------------------------------------------------------
 # AWS LOAD BALANCER
 #------------------------------------------------------------------------------
@@ -21,6 +22,10 @@ data "aws_lb_listener" "lb_http_listeners" {
   arn   = element(var.lb_http_listeners_arns, count.index)
 }
 
+data "aws_lb_listener" "lb_https_listeners" {
+  count = length(var.lb_https_listeners_arns)
+  arn   = element(var.lb_https_listeners_arns, count.index)
+}
 
 #------------------------------------------------------------------------------
 # AWS ECS SERVICE

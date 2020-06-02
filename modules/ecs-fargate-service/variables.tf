@@ -143,6 +143,11 @@ variable "lb_http_listeners_arns" {
   type = list(string)
 }
 
+variable "lb_https_listeners_arns" {
+  description = "List of HTTPS LB Listeners ARNs"
+  type = list(string)
+}
+
 variable "load_balancer_sg_id" {
   description = "The ID of the security group of the Load Balancer. This is to allow traffic only from Load Balancer"
   type        = string

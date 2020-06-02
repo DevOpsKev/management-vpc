@@ -3,6 +3,7 @@
 #------------------------------------------------------------------------------
 module ecs-cluster {
   source  = "../ecs-cluster"
+
   name    = "${var.name_preffix}"
 }
 
