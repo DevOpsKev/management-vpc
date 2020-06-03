@@ -57,3 +57,4 @@ module "webInstanceModule" {
   security_group_ids = [module.securityGroupModule.sg_22, module.securityGroupModule.sg_80]
   key_pair_name      = "ROOTUSEKP"
 }
+
